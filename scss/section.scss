@@ -3,6 +3,14 @@
 }
 
 .section_one {
+  .left {
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   .body {
     .content {
       font-size: 21px;

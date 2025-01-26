@@ -1,27 +1,28 @@
 let init=()=>{console.log("Init Tasteology page");var e=[SectionOne.render(),SectionTwo.render()].join("");Utils.inject("container",e)};
-let SectionOne={render:()=>{var e=SectionOne;return`
+let SectionOne={modal_id:"section_one_modal_id",render:()=>{var e=SectionOne;return`
       <section id="section_one" class="section section_one">
         <div class="row">
-          <div class="col-7">
+          <div class="col-7 left">
             ${e.renderLeft()}
           </div>
           <div class="col-5 right">
             ${e.renderRight()}
           </div>
         </div>
+        ${Modal.render(e.modal_id)}
       </section>
     `},renderLeft:()=>`
       <div class="d-flex justify-content-between gap-2">
-        <div class="">
-          <img src="assets/images/SectionOne/Left.png" alt="Left.png" class="img-fluid"/>
+        <div>
+          <img src="assets/images/SectionOne/Left.png" alt="Left.png" class="img-fluid" onclick="SectionOne.handleImageClick(this)"/>
         </div>
-        <div class="">
+        <div>
           <div class="d-flex flex-column justify-content-between gap-2">
             <div>
-              <img src="assets/images/SectionOne/RightTop.png" alt="RightTop.png" class="img-fluid"/>
+              <img src="assets/images/SectionOne/RightTop.png" alt="RightTop.png" class="img-fluid" onclick="SectionOne.handleImageClick(this)"/>
             </div>
             <div>
-              <img src="assets/images/SectionOne/RightBottom.png" alt="RightBottom.png" class="img-fluid" />
+              <img src="assets/images/SectionOne/RightBottom.png" alt="RightBottom.png" class="img-fluid" onclick="SectionOne.handleImageClick(this)"/>
             </div>
           </div>
         </div>
@@ -44,7 +45,11 @@ let SectionOne={render:()=>{var e=SectionOne;return`
           </p>
         </div>
       </div>
-    `};
+    `,handleImageClick:e=>{var i=SectionOne,e=(console.log("<img> clicked"),console.log(e),`
+      <div>
+        <img src="${e.src}"/>
+      </div>
+    `);Modal.openModal(i.modal_id,e)}};
 let Card={render:i=>`
       <div class="card_item col-4 text-center">
         <a href="#" target="_self" onclick="Card.handleAnchorClick(this, '${i.title}', '${i.url}')">
@@ -78,4 +83,12 @@ let SectionTwo={render:()=>{SectionTwo;return`
 let Headline=e=>`
     <h1 class="headline">${e}</h1>
   `;
+let Modal={render:o=>`
+      <dialog id="${o}">
+        <div class="modal_close" onclick="Modal.closeModal('${o}')">
+          X
+        </div>
+        <div id="${o}_content" class="modal_content"></div>
+      </dialog>
+    `,openModal:(o,l)=>{var e=document.getElementById(o);e&&(console.log("Open modal"),Utils.inject(o+"_content",l),e.showModal())},closeModal:o=>{o=document.getElementById(o);o&&(console.log("Close modal"),o.close())}};
 let Utils={inject:(e,t)=>{e=document.getElementById(e);e&&(e.innerHTML=t)},cards:[{id:1,title:"Red",description:"Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.",img_src:"assets/images/SectionTwo/Red.png",url:"/taste-the-colours/red"},{id:2,title:"Green",description:"Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours",img_src:"assets/images/SectionTwo/Green.png",url:"/taste-the-colours/green"},{id:3,title:"White",description:"White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.",img_src:"assets/images/SectionTwo/White.png",url:"/taste-the-colours/white"}]};
