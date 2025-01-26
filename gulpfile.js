@@ -17,7 +17,7 @@ function css() {
       ext:['.css']
     }))
     .pipe(sass())
-    // .pipe(cleanCSS())
+    .pipe(cleanCSS())
     .pipe(dest('assets/build'));
 
   watch(scss_files, function() {
