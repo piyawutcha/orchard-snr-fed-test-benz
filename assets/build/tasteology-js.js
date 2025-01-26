@@ -55,6 +55,7 @@ let Card={render:l=>`
         <a href="#" target="_self" onclick="Card.handleAnchorClick(this, '${l.title}', '${l.url}')">
           <div class="card_img">
             <img src="${l.img_src}" alt="${l.title}" class="img-fluid" />
+            <div class="overlay"></div>
           </div>
           <div class="card_content">
             <div class="card_title">
@@ -67,7 +68,7 @@ let Card={render:l=>`
           </div>
         </a>
       </div>
-    `,handleAnchorClick:(l,c,i)=>{console.log("<a> tag clicked on "+c),console.log(l),console.log(`This will direct to 'Test the colours: ${c}' page by window.location.href = '${i}'`)}};
+    `,handleAnchorClick:(l,i,c)=>{console.log("<a> tag clicked on "+i),console.log(l),console.log(`This will direct to 'Test the colours: ${i}' page by window.location.href = '${c}'`)}};
 let SectionTwo={render:()=>{SectionTwo;return`
       <section id="section_two" class="section section_two">
         <div class="text-center">

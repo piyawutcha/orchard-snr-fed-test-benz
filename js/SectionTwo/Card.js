@@ -5,6 +5,7 @@ const Card = {
         <a href="#" target="_self" onclick="Card.handleAnchorClick(this, '${card.title}', '${card.url}')">
           <div class="card_img">
             <img src="${card.img_src}" alt="${card.title}" class="img-fluid" />
+            <div class="overlay"></div>
           </div>
           <div class="card_content">
             <div class="card_title">
