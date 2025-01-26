@@ -1,0 +1,39 @@
+.section {
+  padding: 120px 147px;
+}
+
+.section_one {
+  .body {
+    .content {
+      font-size: 21px;
+      font-weight: 300;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin: 30px 0;
+    }
+
+    .callout {
+      h3 {
+        color: $callout_header;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 21px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+      }
+
+      p {
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+}
