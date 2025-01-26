@@ -17,3 +17,15 @@ dialog {
     background-color: rgba(0, 0, 0, 0.6);
   }
 }
+
+@media (max-width: 576px) {
+  dialog {
+    width: 60vw;
+
+    .modal_content {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
