@@ -20,6 +20,7 @@
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
       margin: 30px 0;
+      word-wrap: break-word;
     }
 
     .callout {
@@ -85,6 +86,122 @@
           text-underline-position: from-font;
           text-decoration-skip-ink: none;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .section_one {
+    .right {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section {
+    width: 90vw;
+  }
+
+  .section_one {
+    padding: 30px 20px;
+    .body {
+      .content {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        margin: 15px 0
+      }
+
+      .callout {
+        h3 {
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .left {
+      .image_container {
+        flex-direction: column;
+        align-items: center;
+
+        .image_left {
+          width: 100%;
+          text-align: center;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .image_right {
+          div {
+            flex-direction: row !important;
+
+            div {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section_two {
+    text-align: center;
+
+    .card_item {
+      .card_content {
+        margin-top: 20px;
+
+        .card_title {
+          h3 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+          }
+        }
+
+        .card_description {
+          p {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  dialog {
+    width: 60vw;
+
+    .modal_content {
+      img {
+        width: 100%;
       }
     }
   }

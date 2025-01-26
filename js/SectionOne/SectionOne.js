@@ -6,10 +6,10 @@ const SectionOne = {
     let html = `
       <section id="section_one" class="section section_one">
         <div class="row">
-          <div class="col-7 left">
+          <div class="order-md-12 col-lg-7 left">
             ${self.renderLeft()}
           </div>
-          <div class="col-5 right">
+          <div class="order-md-12 col-lg-5 right">
             ${self.renderRight()}
           </div>
         </div>
@@ -22,11 +22,11 @@ const SectionOne = {
 
   renderLeft: () => {
     let html = `
-      <div class="d-flex justify-content-between gap-2">
-        <div>
+      <div class="image_container d-flex justify-content-between gap-2">
+        <div class="image_left">
           <img src="assets/images/SectionOne/Left.png" alt="Left.png" class="img-fluid" onclick="SectionOne.handleImageClick(this)"/>
         </div>
-        <div>
+        <div class="image_right">
           <div class="d-flex flex-column justify-content-between gap-2">
             <div>
               <img src="assets/images/SectionOne/RightTop.png" alt="RightTop.png" class="img-fluid" onclick="SectionOne.handleImageClick(this)"/>
