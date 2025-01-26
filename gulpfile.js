@@ -13,7 +13,7 @@ function css() {
   let styles_file = 'scss/styles.scss';
 
   src(styles_file)
-    .pipe(cleanDir('dist/',{
+    .pipe(cleanDir('assets/build',{
       ext:['.css']
     }))
     .pipe(sass())
