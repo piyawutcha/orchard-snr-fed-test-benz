@@ -1,0 +1,1 @@
+let init=()=>{console.log("Init Tasteology page")};
