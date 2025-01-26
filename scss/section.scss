@@ -37,3 +37,47 @@
     }
   }
 }
+
+.section_two {
+  .card_list {
+    margin-top: 30px;
+  }
+
+  .card_item {
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .card_content {
+      margin-top: 30px;
+      padding: 0 30px;
+
+      .card_title {
+        h3 {
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 30px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+
+      .card_description {
+        p {
+          font-size: 21px;
+          font-weight: 300;
+          line-height: 30px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+  }
+}
