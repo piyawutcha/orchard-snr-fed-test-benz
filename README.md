@@ -1,2 +1,3 @@
-# orchard-snr-fed-test-benz
+# Orchard - Senior Frontend Developer - Interface Development Test
 Senior Frontend Developer - Interface Development Test
+Author: Benz Chantasrisawat
